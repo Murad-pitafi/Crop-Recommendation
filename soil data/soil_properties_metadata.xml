@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Gabriel Senay</origin>
+        <origin>Olena Boiko</origin>
+        <origin>Stefanie Kagone</origin>
+        <pubdate>20210122</pubdate>
+        <title>Soil properties dataset in the United States, Derived from 2020 gNATSGO database</title>
+        <geoform>raster digital data</geoform>
+        <onlink>https://doi.org/10.5066/P9TI3IS8</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The dataset consists of three raster GeoTIFF files describing the following soil properties in the US: available water capacity, field capacity, and soil porosity. The input data were obtained from the gridded National Soil Survey Geographic (gNATSGO) Database and the Gridded Soil Survey Geographic (gSSURGO) Database with Soil Data Development tools provided by the Natural Resources Conservation Service. The soil characteristics derived from the databases were Available Water Capacity (AWC), Water Content (one-third bar) (WC), and Bulk Density (one-third bar) (BD) aggregated as weighted average values in the upper 1 m of soil. AWC and WC layers were converted to mm/m to express respectively available water capacity and field capacity in 1 m of soil, and BD layer was used to produce soil porosity raster assuming that the average particle density of soils is equal to 2.65 g/cm3. For each soil property, soil maps with CONUS, Alaska, and Hawaii geographic coverages were derived from separate databases and combined into one file. To replace no data values within a raster, we used data values statistically derived from neighboring cell values. The final product is provided in a GeoTIFF format and therefore can be easily integrated into raster-based models requiring estimates of soil characteristics in the US.</abstract>
+      <purpose>This soil dataset can be used in a variety of applications for hydrologic research. We use these data to model Evapotranspiration (ET) with Vegetation ET model that integrates water balance algorithms with remotely sensed phenology data.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>2020</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-179.1483</westbc>
+        <eastbc>-47.8125</eastbc>
+        <northbc>71.3917</northbc>
+        <southbc>16.9727</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>inlandWaters</themekey>
+        <themekey>geoscientificInformation</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>soil moisture</themekey>
+        <themekey>water use</themekey>
+        <themekey>agriculture</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5fd7c19cd34e30b9123cb51f</themekey>
+      </theme>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the dataset's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Gabriel Senay</cntper>
+          <cntorg>U.S. Geological Survey, LAND RESOURCES</cntorg>
+        </cntperp>
+        <cntpos>RESEARCH PHYSICAL SCIENTIST</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>47914 252Nd Street</address>
+          <city>Sioux Falls</city>
+          <state>SD</state>
+          <postal>57198</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>605-594-2758</cntvoice>
+        <cntemail>senay@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Dataset is based on soil database released by the US Department of Agriculture - Natural Resources Conservation Service (USDA-NRCS) Soil &amp; Plant Science Division (SPSD).</datacred>
+    <native>Operating system: Windows 10 Enterprise operating system
+Software: Environmental Systems Research Institute (ESRI) ArcMap 10.7.1
+Added Toolbox: Soil Data Management Toolbox for ArcGIS  Version 5.0
+Final file names: awc_gNATSGO_US.tif (File size: 1.03 GB); fc_gNATSGO_US.tif (File size: 1.08 GB); por_gNATSGO_US.tif  (File size: 1.09 GB)</native>
+    <crossref>
+      <citeinfo>
+        <origin>Soil Survey Staff. United States Department of Agriculture, Natural Resources Conservation Service</origin>
+        <pubdate>20200330</pubdate>
+        <title>The Gridded National Soil Survey Geographic (gNATSGO) Database for the Conterminous United States</title>
+        <geoform>tabular digital data</geoform>
+        <onlink>https://nrcs.app.box.com/v/soils</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Soil Survey Staff. United States Department of Agriculture, Natural Resources Conservation Service</origin>
+        <pubdate>20200330</pubdate>
+        <title>The Gridded National Soil Survey Geographic (gNATSGO) Database for Alaska</title>
+        <geoform>tabular digital data</geoform>
+        <onlink>https://nrcs.app.box.com/v/soils</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Soil Survey Staff. United States Department of Agriculture, Natural Resources Conservation Service</origin>
+        <pubdate>20191218</pubdate>
+        <title>The Gridded Soil Survey Geographic (SSURGO) Database for Hawaii</title>
+        <geoform>tabular digital data</geoform>
+        <onlink>https://nrcs.app.box.com/v/soils</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>This dataset was compared to similar soil moisture properties datasets:
+1) Area- and Depth-Weighted Averages of Selected SSURGO Variables for the Conterminous United States and District of Columbia produced by Michael E. Wieczorek (USGS-WRD MDWSC, Geographer)
+2) Global Soil datasets produced by the International Soil Reference and Information (ISRIC — World Soil Information)
+3) Soil Physical Properties produced and modified by USGS Soil Scientist Norman Bliss
+To verify reasonable comparison with other datasets spot check was conducted across the study area that included sample points with different land cover classes, soil types, and topography.</attraccr>
+    </attracc>
+    <logic>
+    </logic>
+    <complete>This dataset is based on the most complete soil database for the United States. However, some missing values identified as 'No Data' were still present. To minimize data gaps, additional processing step was added to fill missing values with the mean values of neighboring pixels. Most missing values were the result of the presence of water bodies and developed areas. Because the primary usage of this dataset is to model land surface processes in the presence of vegetation cover, it is recommended to use this dataset with an inland water mask to avoid misrepresentation of soil moisture values in the presence of inland water.</complete>
+    <lineage>
+      <procstep>
+        <procdesc>Input data and tools
+
+Downloaded input data: Gridded National Soil Survey Geographic Database (gNATSGO) for CONUS and Alaska, and  Soil Survey Geographic Database (SSURGO) for Hawaii. Also, downloaded Soil Development toolbox provided by the National Resources Conservation Service of the US Department of Agriculture (NRCS-USDA) and added the tools to the ArcToolbox.</procdesc>
+        <procdate>20200331</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Resample
+
+Original 30 m for CONUS and 10 m for Alaska and Hawaii map unit raster was resampled to 90m for faster processing. Tool used: Soil Development Tools &gt;&gt; gSSURGO Raster Toolset &gt;&gt; Resample Mapunit Raster. Spatial resolution 90 m was preserved as the final resolution of the dataset.</procdesc>
+        <procdate>20200508</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Produce raster files (separately for CONUS, HI, and AK)
+
+To generate soil maps tool used: Soil Development Tools &gt;&gt; gSSURGO Mapping Toolset &gt;&gt; Create Soil Map. 
+
+Input parameters:
+Top depth 0 cm
+Bottom depth 100 cm
+Aggregation method - weighted average
+
+Raster files were produced from soil maps with gSSURGO Raster Toolset &gt;&gt; Create gSSURGO Raster</procdesc>
+        <procdate>20200508</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Unit conversion (separately for CONUS, HI, and AK)
+
+Note: this step is different for different soil properties
+
+Available water capacity from gNATSGO and gSSURGO is displayed as a fraction in cm/cm. To get to mm/m, we multiplied the original layer by 1,000 with Raster Calculator tool.
+
+Water Content at 1/3 bar from gNATSGO and gSSURGO is displayed as a percentage of water. To get Field Capacity in mm/m, we multiplied the original layer by 10 with Raster Calculator tool.
+
+Bulk density at 1/3rd bar raster datasets were used as an input parameter to calculate porosity with the following formula:
+porosity = (1 - bd/ 2.65)* 1 000,
+where bd is bulk density in g/cm3 and 2.65 g/cm3 is average particle density for soils. After using this formula in Raster Calculator, we obtain porosity in mm/m.</procdesc>
+        <procdate>20200508</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Merge raster files to get full US coverage
+
+After CONUS, Hawaii, and Alaska were processed separately, tool Mosaic to New Raster (Data Management) was used to get complete coverage for the US.</procdesc>
+        <procdate>20200522</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Fill missing values
+
+Missing data (mostly related to the presence of water bodies, cities, etc) were filled with Focal Statistics Arc Tool based on the values of neighboring pixels. 
+This step was run multiple times to fill the gaps progressively. With this approach, smaller gaps were targeted first and were assigned the mean value of their closest neighbors while larger gaps were filled based on a larger number of neighboring pixels. Number of cells for each step:
+1) Focal Statistics 5 by 5
+2) Focal Statistics 50 by 50
+3) Focal Statistics 500 by 500
+4) Focal Statistics 500 by 500</procdesc>
+        <procdate>20200522</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Change projection
+
+Final rater file was projected from its native USA Contiguous Albers Equal Area Conic Coordinate System to Geographic Coordinate System GCS_WGS_1984 with the tool Project Raster (Data Management).</procdesc>
+        <procdate>20200522</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>39583</rowcount>
+      <colcount>265507</colcount>
+      <vrtcount>1</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>0.00135185714387455</latres>
+        <longres>0.00135185714387455</longres>
+        <geogunit>Decimal seconds</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>WGS_1984</horizdn>
+        <ellips>WGS 84</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey</cntorg>
+          <cntper>GS ScienceBase</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P9TI3IS8</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20210122</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Olena Boiko</cntper>
+          <cntorg>U.S. Geological Survey, LAND RESOURCES</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>47914 252Nd Street</address>
+          <city>Sioux Falls</city>
+          <state>SD</state>
+          <postal>57198</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>605-594-6543</cntvoice>
+        <cntemail>oboiko@contractor.usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
