@@ -60,4 +60,3 @@ if uploaded_file is not None:
 
   st.write("Recommendations:")
   st.text_area("", results['recommendations'])  
-  
