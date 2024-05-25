@@ -4,8 +4,8 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler
 import joblib as joblib
 
-# Load the trained model
-model = load_model('D:/Crop-Recommendation/Model/recommended_model.h5')
+# Load the trained models
+model = joblib.load('D:/Crop-Recommendation/Model/knn_model.joblib')
 
 # Initialize the scaler (use the same scaler you used during training)
 scaler = joblib.load('D:/Crop-Recommendation/Model/scaler.pkl')
@@ -44,7 +44,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)
 st.header("Feature Selection")
 
 # Define the available features in the dropdown menu
-features = ['Boron', 'Zinc', 'Phosphorus', 'Potassium', 'Sulfur']
+features = ['Boron', 'Zinc', 'Phosphorus', 'Potassium', 'Sulfur', 'Nitrogen', 'Temperature']
 
 # Display dropdown menu to select features
 selected_features = st.multiselect("Select features:", features)
@@ -55,9 +55,11 @@ default_values = {
     'Zinc': 13,
     'Phosphorus': 63,
     'Potassium': 135,
-    'Sulfur': 13.5
+    'Sulfur': 13.5,
+    'Nitrogen': 43.2,
+    'Temperature': 34
 }
-user_values = default_values.copy()
+user_values = {}
 
 if selected_features:
     st.write("**Note: Features not Selected will be given a default value**")
@@ -82,10 +84,21 @@ if st.button("Confirm"):
                 st.write(f"{feature}: {default_values[feature]}")
         
         input_data = np.array([user_values[feature] for feature in features]).reshape(1, -1)
-        input_data_normalized = scaler.transform(input_data)
+        print(input_data)
+        input_data_normalized = scaler.fit_transform(input_data)
         prediction = model.predict(input_data_normalized)
         print(prediction)
-        recommendation = "Based on the analysis, your soil seems suitable for cotton!" if prediction[0] >= 0.3 else "Based on the analysis, your soil does not seem suitable for cotton."
+        recommendation = "Based on the analysis, your soil seems suitable for cotton!" if prediction[0] >= 0.5 else "Based on the analysis, your soil does not seem suitable for cotton."
+        # input_data = np.array([user_values[feature] for feature in features]).reshape(1, -1)
+        # input_data_normalized = scaler.transform(input_data)
+        # prediction_prob = model.predict(input_data_normalized)[0]
+        # print(prediction_prob)  # Print the probability for debugging purposes
+
+        # # Apply threshold to convert probabilities to binary predictions
+        # prediction = 1 if prediction_prob >= 0.5 else 0
+
+        # recommendation = "Based on the analysis, your soil seems suitable for cotton!" if prediction == 1 else "Based on the analysis, your soil does not seem suitable for cotton."
+
 
         st.write("Recommendations:")
         st.write(recommendation)
